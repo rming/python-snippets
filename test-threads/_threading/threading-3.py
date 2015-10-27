@@ -5,10 +5,9 @@ import sys, time, threading
 
 class myCounter(threading.Thread):
     def __init__(self, start, interval, threadName):
-        threading.Thread.__init__(self) 
+        threading.Thread.__init__(self, name=threadName) 
         self.startNum   = start
         self.interval   = interval
-        self.name       = threadName
         self.stopSignal = False
 
     def run(self):
