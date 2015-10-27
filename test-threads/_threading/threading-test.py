@@ -17,4 +17,4 @@ class MyThread(threading.Thread):
 
 t = MyThread()
 t.start()
-
+t.stop()
