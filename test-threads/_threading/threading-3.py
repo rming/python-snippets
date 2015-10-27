@@ -14,15 +14,15 @@ class myCounter(threading.Thread):
         i = self.startNum
         while not self.stopSignal:
             i +=self.interval
-            print  "%s-%s\n" % self.getName(), str(i)
+            print  "%s-%s\n" % (self.getName(), str(i))
             time.sleep(1)
 
     def stop(self):
         self.stopSignal = True
 
 t0 = myCounter(1 ,1, 't0')
-t1 = myCounter(1 ,4, 't1')
-t2 = myCounter(1 ,8, 't2')
+t1 = myCounter(1 ,2, 't1')
+t2 = myCounter(1 ,3, 't2')
 
 t0.start() 
 t1.start() 
