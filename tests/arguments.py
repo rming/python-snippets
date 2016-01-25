@@ -2,6 +2,7 @@
 #coding:utf-8
 #
 #
+
 def foo(*args, **kwargs):
     print 'args = ', args
     print 'kwargs = ', kwargs
