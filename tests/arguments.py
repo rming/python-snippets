@@ -4,6 +4,9 @@
 #
 
 def foo(*args, **kwargs):
+    """
+        This is the __doc__
+    """
     print 'args = ', args
     print 'kwargs = ', kwargs
     print '---------------------------------------'
@@ -17,3 +20,5 @@ if __name__ == '__main__':
     foo('a', 1, None, a=1, b='2', c=3)
     pass
     foo(*(1,2,3,5), **{'a':1,'b':2})
+    pass
+    print foo.__doc__
